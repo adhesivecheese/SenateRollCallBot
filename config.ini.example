@@ -1,0 +1,12 @@
+[DATABASE]
+NAME = votes
+
+[MAIN]
+congress_number = 118
+congress_ordinal = 118th
+congress_session = 2
+check_minutes = 10
+
+[BSKY]
+username = senaterollcallbot.bsky.social
+password = <app password here>
