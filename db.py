@@ -1,5 +1,6 @@
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, Column
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy.dialects.mysql import INTEGER
 from sqlalchemy.ext.declarative import declarative_base
 from configparser import ConfigParser
 
@@ -11,11 +12,6 @@ SQLALCHEMY_DATABASE_URL = f"sqlite:///{db_name}.db"
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 Session = sessionmaker(autocommit=False, bind=engine)
 Base = declarative_base()
-
-
-from sqlalchemy import Column
-from sqlalchemy.dialects.mysql import INTEGER
-from sqlalchemy.ext.declarative import declarative_base
 
 
 class Vote_Table(Base):
